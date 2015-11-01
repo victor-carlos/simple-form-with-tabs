@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>JavaScript Utils</title>
+<link rel="stylesheet" href="_css/style.css" />
+<script type="text/javascript" src="_js/script.js" ></script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>Form</h1>
+		<form action="" method="post" onmousemove="autocheck(this)" onsubmit="return SendMessage(this);">
+			<ul>
+				<li class="btn_tab" id="btn_tab0" onclick="nextTab(0);">Step 1</li>
+				<li class="btn_tab" id="btn_tab1" onclick="nextTab(1);">Step 2</li>
+				<li class="btn_tab" id="btn_tab2" onclick="nextTab(2);">Step 3</li>
+				<li class="btn_tab" id="btn_tab3" onclick="nextTab(3);">Step 4</li>
+			</ul>
+			<input type="hidden" name="index-tab" id="index-tab" value="0" />
+			<ol>
+				<li class="panel_tab">
+					<p><label for="name">Name: </label></p>
+					<input type="text" name="name" /><br /><br />
+					
+					<p><label for="age">Age: </label></p>
+					<input type="number" name="age" min="1" max="127" value="1" /><br /><br />
+					
+				</li>
+				
+				<li class="panel_tab" style="display: none;">
+					<p><label for="site">Site (optional): </label></p>
+					<input type="text" name="site" /><br /><br />
+					
+					<p><label for="email">Email: </label></p>
+					<input type="text" name="email" /><br /><br />
+				</li>
+				
+				<li class="panel_tab" style="display: none;">
+					<p><label for="message_type">Message Type</label></p>
+					<select name="message_type">
+						<option>Compliment</option>
+						<option>Suggestion</option>
+						<option>Complaint</option>
+						<option>Other</option>
+					</select><br />
+					
+					<span id="other-message" style="display: none;"><input type="text" name="message-type" placeholder="Other message" /><br /><br /></span>
+					
+					<p><label>Priority</label></p>
+					<input type="radio" name="radio" value="1" checked />1&nbsp;
+					<input type="radio" name="radio" value="2" />2&nbsp;
+					<input type="radio" name="radio" value="3" />3&nbsp;
+					<input type="radio" name="radio" value="4" />4&nbsp;
+					<input type="radio" name="radio" value="5" />5&nbsp;
+				</li>
+				
+				<li class="panel_tab" style="display: none;">
+					<p><label for="message">Message: </label></p>
+					<textarea name="message"></textarea>
+				</li>
+			</ol>
+			<fieldset>
+				<div id="notice"></div><br />
+				<input type="submit" name="submit" id="btn_submit" value="OK" />
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
